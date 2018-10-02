@@ -65,6 +65,7 @@ exports.productPrice = function(req,res) {
         finalArray.push(res3.data);
         res.send(JSON.stringify(finalArray));
     })).catch(function(err){
+        res.status(500).send("Something went wrong!!")
         console.log(err);
     })
 }
