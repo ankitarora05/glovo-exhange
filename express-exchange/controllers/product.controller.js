@@ -12,16 +12,14 @@ exports.listAllProducts = function(req,res) {
         let unionExchange = findCommonProducts(res1.data, res2.data, res3.data);
         res.send(unionExchange);
     })).catch(function(err){
-        console.log(err);
+        res.status(500).send("Something went wrong!!");
     });
 
 }
 
 function findCommonProducts(arr1, arr2, arr3) {
     let arrays = []
-    arrays.push(arr1);
-    arrays.push(arr2);
-    arrays.push(arr3);
+    arrays.push(arr1, arr2, arr3);
     var currentValues = {};
     var commonValues = {};
     for (var i = arrays[0].length-1; i >=0; i--){//Iterating backwards for efficiency
@@ -60,12 +58,9 @@ exports.productPrice = function(req,res) {
         res2.data["exchange"] = 'BNB';
         res3.data["exchange"] = 'BFX';
         let finalArray = [];
-        finalArray.push(res1.data);
-        finalArray.push(res2.data);
-        finalArray.push(res3.data);
+        finalArray.push(res1.data, res2.data, res3.data);
         res.send(JSON.stringify(finalArray));
     })).catch(function(err){
-        res.status(500).send("Something went wrong!!")
-        console.log(err);
+        res.status(500).send("Something went wrong!!");
     })
 }
