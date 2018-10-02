@@ -21,6 +21,38 @@
 .App-intro {
   font-size: large;
 }
+.selector {
+  font-size: 1.5em;
+}
+.product-info {
+  margin: 2em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-info-container {
+  flex-grow: 1;
+  width: 33%;
+  margin: 0.5em;
+  border: 1px solid #dedede;
+  padding: 1.5em;
+}
+
+.exchange-title {
+  font-size: 1.5em;
+}
+
+.exchange-price {
+  font-size: 2em;
+  margin: 1em 0;
+}
+
+.Loading {
+  font-size: 2em;
+  margin: 2em 0;
+  color: red;
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
