@@ -10,4 +10,3 @@
 #Both the client and server have independent build and api requests are made over a proxy set in package.json
 
 # Open localhost:3000 to start the react client
-# Have Fun!
